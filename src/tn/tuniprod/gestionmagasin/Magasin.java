@@ -14,24 +14,32 @@ public class Magasin {
     int identifiant;
     String adresse;
     int capacite;
-
+    
     ProduitAliementaire[] produits;
     Employe[] employes;
-    
+    String nom_magasin;
     public Magasin(int identifiant, String adresse) {
         this.identifiant = identifiant;
         this.adresse = adresse;
         this.produits = new ProduitAliementaire[50];
         this.employes = new Employe[20];
     }
-
+    public Magasin (int identifiant,  String nom_magasin,String adresse){
+        this.identifiant = identifiant;
+        this.nom_magasin = nom_magasin;
+        this.adresse = adresse;        
+        this.produits = new ProduitAliementaire[50];
+        this.employes = new Employe[20];
+    }
     @Override
     public String toString() {
         String s = "";
-        s += "identifiant : " + this.identifiant + " \n";
-        s += "adresse : " + this.adresse + " \n";
-        s += "capacite : " + this.capacite + " \n";
-
+        s += "Identifiant : " + this.identifiant + " \n";
+        // added nom_mag for prosit 4
+        s += "Nom Magasin : " + this.nom_magasin + " \n";
+        s += "Adresse : " + this.adresse + " \n";
+        s += "Capacite : " + this.capacite + " \n";
+        
         String prods = "";
         for (int i = 0; i < this.capacite; i++) {
             prods += this.produits[i];

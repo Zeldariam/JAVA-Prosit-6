@@ -58,14 +58,19 @@ public class TuniProdGestionMagasin {
 //---------------------------------------
 
 //        System.out.println(produit44.comparer(produit4));
-      System.out.println("============  QUESTION 6: ==================");  
-        System.out.println("QUESTION 6: Magasin ayant nbre de produits superieur entre M1 et M2"+m1.comparer(m2));
+//      System.out.println("============  QUESTION 6: ==================");  
+//        System.out.println("QUESTION 6: Magasin ayant nbre de produits superieur entre M1 et M2"+m1.comparer(m2));
 //        
         
 //        m1.supprimerProduit(new ProduitAliementaire(98798, "qsd", "qsd"));
         //System.out.println(m1);
+// ************************************ PROSIT 4 ************************************************** //        
+    // Q1 : 
+        Magasin carrefour = new Magasin(1, "Carrefour", "Centre-ville");
+        Magasin monoprix = new Magasin(2, "Monoprix", "Menzah 6");
         
-
+    // Q2 :
+        
     }
 
 }
