@@ -74,7 +74,7 @@ public class TuniProdGestionMagasin {
         Caissier caissierCarrefour1 = new Caissier(1, "C1 sofiene rigouta", "ariana", 11, 111);
         Caissier caissierCarrefour2 = new Caissier(2, "C2 mounir do5an", "bardo", 22, 222);
         Vendeur vendeurCarrefour = new Vendeur(3,"VendeurCar 1","centre ville", 33,333);
-        Responsable responsableCarrefour = new Responsable(4, "3ezdine gzez", "ghazela", 44, 44);
+        Responsable responsableCarrefour = new Responsable(4, "3ezdine gzez CARREFOUR", "ghazela", 170, 44);
         carrefour.ajouterCaissier(caissierCarrefour1);
         carrefour.ajouterCaissier(caissierCarrefour2);
         carrefour.ajouterVendeur(vendeurCarrefour);
@@ -90,7 +90,7 @@ public class TuniProdGestionMagasin {
         monoprix.ajouterVendeur(vendeurMonoprix2);
         monoprix.ajouterVendeur(vendeurMonoprix3);
         monoprix.ajouterResponsable(responsableMonoprix);
-    // Q3+4+5
+    // Q3+4+5 :
         carrefour.ajouterProduit(produit1);
         carrefour.ajouterProduit(produit2);
         carrefour.ajouterProduit(produit3);
@@ -100,8 +100,17 @@ public class TuniProdGestionMagasin {
         System.out.println("\n###################### MAGASIN 1 ####################");
         System.out.println(carrefour);
         System.out.println("###################### MAGASIN 2 ####################");
-        System.out.println(monoprix);// Q3 :
-        
+        System.out.println(monoprix);
+    // Q6 :
+        System.out.println("Salaire RESPONSABLE CARREFOUR: "+responsableCarrefour.salaireResponsable());
+        System.out.println("Salaire RESPONSABLE MONOPRIX: "+responsableMonoprix.salaireResponsable());
+
+        System.out.println("Salaire VENDEUR MONOPRIX: "+ vendeurMonoprix1.salaireVendeur());
+
+        System.out.println("Salaire CAISSIER MONOPRIX: "+ caissierMonoprix1.salaireCaissier());
+
+
+
     }
 
 }

@@ -11,6 +11,8 @@ package tn.tuniprod.gestionmagasin;
  */
 public class Caissier extends Employe {
     private int numeroDeCaisse;
+    static float salaireHeure = 5;
+    static float tauxHeureBonus = 0.15f;
     public Caissier (int identifiant, String nom_emp, String adresse_emp, int nb_heures, int numeroDeCaisse){
         super(identifiant, nom_emp, adresse_emp, nb_heures);
         this.numeroDeCaisse = numeroDeCaisse;
@@ -26,5 +28,14 @@ public class Caissier extends Employe {
         s += "Nbr heures : " + this.nb_heures + " \n";
         
         return s;
+    }
+    public float salaireCaissier(){
+        if (nb_heures>160){
+            System.out.println("HEURE SUPPLEMENTAIRE");
+            // (nbr d'heure x salaireHeure ) + (HEURE SUPLEMENTRE + 15% SALAIRE HORAIRE)
+            return (nb_heures*salaireHeure)+( (this.nb_heures-160) * (salaireHeure+(salaireHeure*tauxHeureBonus)) );
+        }else{
+            return nb_heures*salaireHeure ;
+        }
     }
 }

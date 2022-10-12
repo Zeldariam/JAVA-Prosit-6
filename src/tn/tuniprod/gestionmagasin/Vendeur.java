@@ -11,6 +11,7 @@ package tn.tuniprod.gestionmagasin;
  */
 public class Vendeur extends Employe{
     private int tauxDeVente;
+    static float salaireVendeur = 450f;
     public Vendeur(int identifiant, String nom_emp, String adresse_emp, int nbr_heures, int tauxDeVente){
         super(identifiant, nom_emp, adresse_emp, nbr_heures);
         this.tauxDeVente = tauxDeVente;
@@ -26,4 +27,8 @@ public class Vendeur extends Employe{
 
         return s;
     }
+    public float salaireVendeur(){
+        return salaireVendeur * (this.tauxDeVente/100) ;
+    }
+
 }
