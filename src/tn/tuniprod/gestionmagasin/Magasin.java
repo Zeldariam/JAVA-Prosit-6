@@ -17,6 +17,7 @@ public class Magasin {
     
     ProduitAliementaire[] produits;
     Employe[] employes;
+    int nbr_employe;
     String nom_magasin;
     public Magasin(int identifiant, String adresse) {
         this.identifiant = identifiant;
@@ -30,24 +31,67 @@ public class Magasin {
         this.adresse = adresse;        
         this.produits = new ProduitAliementaire[50];
         this.employes = new Employe[20];
+        this.nbr_employe = 0;
     }
     @Override
     public String toString() {
         String s = "";
-        s += "Identifiant : " + this.identifiant + " \n";
-        // added nom_mag for prosit 4
-        s += "Nom Magasin : " + this.nom_magasin + " \n";
-        s += "Adresse : " + this.adresse + " \n";
-        s += "Capacite : " + this.capacite + " \n";
-        
-        String prods = "";
+        s += "||  IDENTIFENT  ||  NOM MAGASIN  || ADRESSE  || CAPACITE||\n";
+        s += "||  "+this.identifiant+"           ||  "+this.nom_magasin+"     || "+this.adresse+" || "+this.capacite+"      ||\n";
+        s += "=====================PRODUITS=================="+" \n";
+
+
+        String products = "";
         for (int i = 0; i < this.capacite; i++) {
-            prods += this.produits[i];
+            products += this.produits[i];
         }
+        s+=products+" \n";
+        s += "=====================Employes=================="+" \n";
+        String employees = "";
+        for (int i = 0; i < this.nbr_employe; i++) {
+            int emp_index =i+1;
+            employees += "Employe n°"+emp_index+"\n"+this.employes[i]+"-------------------------------------"+"\n";
+        }
+        
 
-        return s + prods;
+        return s+employees;
     }
-
+    public boolean chercherEmploye(Employe emp) {
+        for (int i = 0; i < this.nbr_employe; i++) {
+            if (this.employes[i].comparerEmp(emp)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public void ajouterCaissier (Caissier caissier){
+        if(this.nbr_employe<20){
+            if (!this.chercherEmploye(caissier)) {
+                this.employes[nbr_employe] = caissier;
+                this.nbr_employe++;
+                System.out.println("AJOUT CAISSIER DONE!!");
+            }
+        }  
+    }
+    public void ajouterResponsable (Responsable responsable){
+        if(this.nbr_employe<20){
+            if (!this.chercherEmploye(responsable)) {
+                 this.employes[nbr_employe] = responsable;
+                this.nbr_employe++;
+                System.out.println("AJOUT RESPONSABLE DONE!!");
+            }
+        }  
+    }
+    public void ajouterVendeur (Vendeur vendeur){
+        if(this.nbr_employe<20){
+            if (!this.chercherEmploye(vendeur)) {
+                this.employes[nbr_employe] = vendeur;
+                this.nbr_employe++;
+                System.out.println("AJOUT VENDEUR DONE!!");
+            }
+        }  
+    }
+    
     public void ajouterProduit(ProduitAliementaire produit) {
         if (this.chercher(produit)) {
             System.out.println("Produit existant");
@@ -107,5 +151,5 @@ public class Magasin {
             return m;
         }
     }
-
+ 
 }

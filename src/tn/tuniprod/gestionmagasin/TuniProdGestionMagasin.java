@@ -70,6 +70,37 @@ public class TuniProdGestionMagasin {
         Magasin monoprix = new Magasin(2, "Monoprix", "Menzah 6");
         
     // Q2 :
+        // MAGASIN 1 CARREFOUR
+        Caissier caissierCarrefour1 = new Caissier(1, "C1 sofiene rigouta", "ariana", 11, 111);
+        Caissier caissierCarrefour2 = new Caissier(2, "C2 mounir do5an", "bardo", 22, 222);
+        Vendeur vendeurCarrefour = new Vendeur(3,"VendeurCar 1","centre ville", 33,333);
+        Responsable responsableCarrefour = new Responsable(4, "3ezdine gzez", "ghazela", 44, 44);
+        carrefour.ajouterCaissier(caissierCarrefour1);
+        carrefour.ajouterCaissier(caissierCarrefour2);
+        carrefour.ajouterVendeur(vendeurCarrefour);
+        carrefour.ajouterResponsable(responsableCarrefour);
+        // MAGASIN 2 MONOPRIX
+        Caissier caissierMonoprix1 = new Caissier(5, "CAISSIER MONOPRIX", "55", 55, 555);
+        Vendeur vendeurMonoprix1 = new Vendeur(6,"VENDEUUR MONOPRIX 1","66 ville", 66,666);
+        Vendeur vendeurMonoprix2 = new Vendeur(7,"VENDEUR MONOPRIX 2","77 GHAZELA", 77,777);
+        Vendeur vendeurMonoprix3 = new Vendeur(8,"VENDEUR MONOPRIX 3"," 88 BARDO ", 88,888);
+        Responsable responsableMonoprix = new Responsable(9, "3ezdine gzez MONOPRIX", " 99 ghazela", 99, 999);
+        monoprix.ajouterCaissier(caissierMonoprix1);
+        monoprix.ajouterVendeur(vendeurMonoprix1);
+        monoprix.ajouterVendeur(vendeurMonoprix2);
+        monoprix.ajouterVendeur(vendeurMonoprix3);
+        monoprix.ajouterResponsable(responsableMonoprix);
+    // Q3+4+5
+        carrefour.ajouterProduit(produit1);
+        carrefour.ajouterProduit(produit2);
+        carrefour.ajouterProduit(produit3);
+        carrefour.ajouterProduit(produit4);
+        monoprix.ajouterProduit(produit3);
+        monoprix.ajouterProduit(produit4);
+        System.out.println("\n###################### MAGASIN 1 ####################");
+        System.out.println(carrefour);
+        System.out.println("###################### MAGASIN 2 ####################");
+        System.out.println(monoprix);// Q3 :
         
     }
 

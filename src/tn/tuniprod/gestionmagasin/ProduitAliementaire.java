@@ -17,8 +17,6 @@ public class ProduitAliementaire {
     private String libelle, marque;
     private float prix;
     private Date dateExpriration ; 
-    
-    
 
     public ProduitAliementaire() {
     }

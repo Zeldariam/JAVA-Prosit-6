@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="TuniProd.GestionMagasin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/TuniProd.GestionMagasin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

@@ -15,4 +15,15 @@ public class Vendeur extends Employe{
         super(identifiant, nom_emp, adresse_emp, nbr_heures);
         this.tauxDeVente = tauxDeVente;
     }
+    @Override
+    public String toString() {
+        String s = "";
+        s += "Identifiant : " + this.identifiant + " \n";
+        // added nom_mag for prosit 4
+        s += "Nom employe: " + this.nom_emp + " \n";
+        s += "Adresse employe: " + this.adresse_emp + " \n";
+        s += "Nbr heures : " + this.nb_heures + " \n";
+
+        return s;
+    }
 }

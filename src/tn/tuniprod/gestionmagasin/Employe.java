@@ -21,5 +21,11 @@ public class Employe {
         this.adresse_emp = adresse_emp;
         this.nb_heures = nb_heures;
     }
+    public boolean comparerEmp(Employe employe){
+        return this.identifiant==employe.identifiant&&
+                this.nom_emp==employe.nom_emp&&
+                this.adresse_emp==employe.adresse_emp&&
+                this.nb_heures==employe.nb_heures;
+    }
     
 }
