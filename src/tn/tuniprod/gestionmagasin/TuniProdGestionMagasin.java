@@ -109,8 +109,12 @@ public class TuniProdGestionMagasin {
 
         System.out.println("Salaire CAISSIER MONOPRIX: "+ caissierMonoprix1.salaireCaissier());
 
-
-
+// ************************************ PROSIT 5 ************************************************** //
+    //Q2 :
+        ProduitFruit P1 = new ProduitFruit(1254,"Fraise",12.3f, "Mars");
+        ProduitFruit P2 = new ProduitFruit(1224,"Pasteque", 50f, "Juin");
+        ProduitFruit P3 = new ProduitFruit(7896,"Mandarine",25.6f, "Decembre");
+        ProduitLegume P4 = new ProduitLegume(8521,"Artichauts",14f, "Janvier");
     }
 
 }

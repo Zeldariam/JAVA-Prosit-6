@@ -17,7 +17,7 @@ public class ProduitAliementaire {
     private String libelle, marque;
     private float prix;
     private Date dateExpriration ; 
-
+    private float quantite;
     public ProduitAliementaire() {
     }
 
@@ -33,6 +33,12 @@ public class ProduitAliementaire {
         this.marque = marque;
         this.prix = prix;
     }
+    public ProduitAliementaire(int identifiant, String libelle,  float quantite) {
+        this.identifiant = identifiant;
+        this.libelle = libelle;
+        this.quantite = quantite;
+    }
+
 
     public int getIdentifiant() {
         return identifiant;
