@@ -125,6 +125,8 @@ public class TuniProdGestionMagasin {
         System.out.println(P1.determinerTypeProduit());
         System.out.println(P4.determinerTypeProduit());
     //Q5 :
+    //STOPPED AT CALCULSTOCK
+        // need to change maasin toString to accomodate PROSIT5 ==> show QUANTITE AND SAISONRECOLTE
         
     }
 }

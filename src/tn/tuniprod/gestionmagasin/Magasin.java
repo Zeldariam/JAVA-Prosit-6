@@ -163,5 +163,15 @@ public class Magasin {
             return m;
         }
     }
- 
+
+    //PROSIT 5
+    public float calculStock(){
+        float quantiteTotale=0;
+        for (int i = 0; i < this.capacite; i++) {
+            if (this.produits[i] instanceof ProduitFruit){
+               quantiteTotale +=1;
+            }
+        }
+        return quantiteTotale;
+    }
 }
