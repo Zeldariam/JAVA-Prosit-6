@@ -86,7 +86,7 @@ public class TuniProdGestionMagasin {
         Vendeur vendeurMonoprix3 = new Vendeur(8,"VENDEUR MONOPRIX 3"," 88 BARDO ", 88,888);
         Responsable responsableMonoprix = new Responsable(9, "3ezdine gzez MONOPRIX", " 99 ghazela", 99, 999);
         monoprix.ajouterCaissier(caissierMonoprix1);
-        monoprix.ajouterVendeur(vendeurMonoprix1);
+/*        monoprix.ajouterVendeur(vendeurMonoprix1);
         monoprix.ajouterVendeur(vendeurMonoprix2);
         monoprix.ajouterVendeur(vendeurMonoprix3);
         monoprix.ajouterResponsable(responsableMonoprix);
@@ -96,8 +96,8 @@ public class TuniProdGestionMagasin {
         carrefour.ajouterProduit(produit3);
         carrefour.ajouterProduit(produit4);
         monoprix.ajouterProduit(produit3);
-        monoprix.ajouterProduit(produit4);
-        System.out.println("\n###################### MAGASIN 1 ####################");
+        monoprix.ajouterProduit(produit4);*/
+        /*System.out.println("\n###################### MAGASIN 1 ####################");
         System.out.println(carrefour);
         System.out.println("###################### MAGASIN 2 ####################");
         System.out.println(monoprix);
@@ -107,7 +107,7 @@ public class TuniProdGestionMagasin {
 
         System.out.println("Salaire VENDEUR MONOPRIX: "+ vendeurMonoprix1.salaireVendeur());
 
-        System.out.println("Salaire CAISSIER MONOPRIX: "+ caissierMonoprix1.salaireCaissier());
+        System.out.println("Salaire CAISSIER MONOPRIX: "+ caissierMonoprix1.salaireCaissier());*/
 
 // ************************************ PROSIT 5 ************************************************** //
     //Q2 :
@@ -115,6 +115,16 @@ public class TuniProdGestionMagasin {
         ProduitFruit P2 = new ProduitFruit(1224,"Pasteque", 50f, "Juin");
         ProduitFruit P3 = new ProduitFruit(7896,"Mandarine",25.6f, "Decembre");
         ProduitLegume P4 = new ProduitLegume(8521,"Artichauts",14f, "Janvier");
+    //Q3 :
+        carrefour.ajouterProduit(P1);
+        carrefour.ajouterProduit(P2);
+        carrefour.ajouterProduit(P3);
+        carrefour.ajouterProduit(P4);
+        System.out.println(carrefour.afficherProduitsAlimentaires());
+    //Q4 :
+        System.out.println(P1.determinerTypeProduit());
+        System.out.println(P4.determinerTypeProduit());
+    //Q5 :
+        
     }
-
 }

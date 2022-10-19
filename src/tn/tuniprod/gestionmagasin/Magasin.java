@@ -56,6 +56,17 @@ public class Magasin {
 
         return s+employees;
     }
+    public String afficherProduitsAlimentaires(){
+
+        String s = "";
+        s += "=====================PRODUITS=================="+" \n";
+        String products = "";
+        for (int i = 0; i < this.capacite; i++) {
+            products += this.produits[i];
+        }
+        s+=products+" \n";
+        return s;
+    }
     public boolean chercherEmploye(Employe emp) {
         for (int i = 0; i < this.nbr_employe; i++) {
             if (this.employes[i].comparerEmp(emp)) {
@@ -69,7 +80,7 @@ public class Magasin {
             if (!this.chercherEmploye(caissier)) {
                 this.employes[nbr_employe] = caissier;
                 this.nbr_employe++;
-                System.out.println("AJOUT CAISSIER DONE!!");
+                //System.out.println("AJOUT CAISSIER DONE!!");
             }
         }  
     }
@@ -78,7 +89,7 @@ public class Magasin {
             if (!this.chercherEmploye(responsable)) {
                  this.employes[nbr_employe] = responsable;
                 this.nbr_employe++;
-                System.out.println("AJOUT RESPONSABLE DONE!!");
+                //System.out.println("AJOUT RESPONSABLE DONE!!");
             }
         }  
     }
@@ -87,7 +98,7 @@ public class Magasin {
             if (!this.chercherEmploye(vendeur)) {
                 this.employes[nbr_employe] = vendeur;
                 this.nbr_employe++;
-                System.out.println("AJOUT VENDEUR DONE!!");
+                //System.out.println("AJOUT VENDEUR DONE!!");
             }
         }  
     }
@@ -98,6 +109,7 @@ public class Magasin {
         } else {
             this.produits[capacite] = produit;
             this.capacite++;
+            //System.out.println("AJOUT PRODUIT DONE");
         }
     }
     

@@ -33,6 +33,7 @@ public class ProduitAliementaire {
         this.marque = marque;
         this.prix = prix;
     }
+    //PROSIT 5 CONSTRUCTOR : REMOVED MARQUE & PRIX , ADDED QUANTITE
     public ProduitAliementaire(int identifiant, String libelle,  float quantite) {
         this.identifiant = identifiant;
         this.libelle = libelle;
@@ -120,7 +121,8 @@ public class ProduitAliementaire {
                 this.prix==produit.prix&&
                 this.libelle==produit.libelle;
     }
-    
-  
 
+    public String determinerTypeProduit(){
+        return "Produit Alimentaire";
+    }
 }

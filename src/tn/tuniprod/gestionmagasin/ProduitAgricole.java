@@ -7,4 +7,10 @@ public class ProduitAgricole extends ProduitAliementaire{
         super(identifiant, libelle, quantite);
         SaisonRecolte = saisonRecolte;
     }
+
+
+    @Override
+    public String determinerTypeProduit() {
+        return "ceci est un Produit Agricole";
+    }
 }
