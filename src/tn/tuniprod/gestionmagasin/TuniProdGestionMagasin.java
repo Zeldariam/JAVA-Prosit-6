@@ -12,7 +12,7 @@ import java.util.Date;
  * @author Zeldariam
  */
 public class TuniProdGestionMagasin {
-
+//SOME OF THE ABOVE PRINTS REQUIRE A toString CHANGE IN RESPECTIVE CLASS, MAINLY Magasin CLASS.
     /**
      * @param args the command line arguments
      */
@@ -126,7 +126,7 @@ public class TuniProdGestionMagasin {
         System.out.println(P4.determinerTypeProduit());
     //Q5 :
     //STOPPED AT CALCULSTOCK
-        // need to change maasin toString to accomodate PROSIT5 ==> show QUANTITE AND SAISONRECOLTE
-        
+        // need to change magasin toString to accomodate PROSIT5 ==> show QUANTITE AND SAISONRECOLTE
+        System.out.println("CALCUL STOCK FRUITS : "+carrefour.calculStock());
     }
 }
