@@ -5,9 +5,9 @@ public class ProduitLegume extends ProduitAgricole{
         super(identifiant, libelle, quantite, saisonRecolte);
     }
 
-    @Override
+   /* @Override
     public String determinerTypeProduit() {
         return "Ce produi est un LEGUME";
-    }
+    }*/
 }
 

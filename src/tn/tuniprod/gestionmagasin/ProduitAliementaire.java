@@ -123,6 +123,11 @@ public class ProduitAliementaire {
     }
 
     public String determinerTypeProduit(){
-        return "Produit Alimentaire";
+        if(this instanceof ProduitFruit){
+            return "FRUIT";
+        }else if (this instanceof  ProduitLegume){
+            return "LEGUME";
+        }
+        return "AUTRE";
     }
 }
