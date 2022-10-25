@@ -22,7 +22,7 @@ public class Magasin {
     public Magasin(int identifiant, String adresse) {
         this.identifiant = identifiant;
         this.adresse = adresse;
-        this.produits = new ProduitAliementaire[50];
+        this.produits = new ProduitAliementaire[2];
         this.employes = new Employe[20];
     }
     public Magasin (int identifiant,  String nom_magasin,String adresse){
@@ -104,13 +104,14 @@ public class Magasin {
     }
     
     public void ajouterProduit(ProduitAliementaire produit) {
-        if (this.chercher(produit)) {
+/*        if (this.chercher(produit)) {
             System.out.println("Produit existant");
         } else {
+*/
             this.produits[capacite] = produit;
             this.capacite++;
             //System.out.println("AJOUT PRODUIT DONE");
-        }
+
     }
     
     public int getIndexOfProduit(ProduitAliementaire produit){
