@@ -105,7 +105,7 @@ public class Magasin {
     
     public void ajouterProduit(ProduitAliementaire produit) throws MagasinPleinException {
        if (this.capacite ==2){
-           throw new MagasinPleinException("!!! MAGASIN PLEIN \n!!!");
+           throw new MagasinPleinException("!!! MAGASIN PLEIN !!!\n");
        }else{
            if (this.chercher(produit)) {
                System.out.println("Produit existant");

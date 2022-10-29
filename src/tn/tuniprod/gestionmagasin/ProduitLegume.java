@@ -1,8 +1,8 @@
 package tn.tuniprod.gestionmagasin;
 
 public class ProduitLegume extends ProduitAgricole{
-    public ProduitLegume(int identifiant, String libelle, float quantite, String saisonRecolte) {
-        super(identifiant, libelle, quantite, saisonRecolte);
+    public ProduitLegume(int identifiant, String libelle, float quantite, float prix, String saisonRecolte) throws PrixNegatifException {
+        super(identifiant, libelle, quantite,prix, saisonRecolte);
     }
 
    /* @Override

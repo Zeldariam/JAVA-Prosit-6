@@ -20,32 +20,55 @@ public class TuniProdGestionMagasin {
 
         Magasin carrefour = new Magasin(1, "Carrefour", "Centre-ville");
         Magasin monoprix = new Magasin(2, "Monoprix", "Menzah 6");
-
-
-            ProduitFruit P1 = new ProduitFruit(1254, "Fraise", 12.3f, "Mars");
-            ProduitFruit P2 = new ProduitFruit(1224, "Pasteque", 50f, "Juin");
-            ProduitFruit P3 = new ProduitFruit(7896, "Mandarine", 25.6f, "Decembre");
-            ProduitLegume P4 = new ProduitLegume(8521, "Artichauts", 14f, "Janvier");
-
-    // Q6 :
-        // uses THROWS MagasinPleinException in method Signature
-        carrefour.ajouterProduit(P1);
-        carrefour.ajouterProduit(P2);
-        carrefour.ajouterProduit(P3);
-        carrefour.ajouterProduit(P4);
-        /* OR :
-            try{
-                carrefour.ajouterProduit(P1);
-                carrefour.ajouterProduit(P2);
-                carrefour.ajouterProduit(P3);
-                carrefour.ajouterProduit(P4);
-            }catch(MagasinPleinException e){
-
-            }
-        */
-        System.out.println(carrefour.afficherProduitsAlimentaires());
-
-    }
     // ************************************ PROSIT 6 ************************************************** //
+        // Q6+Q7 :
+        //USES THROWS MagasinPleinException & PrixNegatifException IN METHOD SIGNATURE
+        //HANDLES UNCHECKED EXCEPTIONS WITH MANUAL TRY CATCH APPROACH
+            // produit 1
+            try {
+                ProduitFruit P1 = new ProduitFruit(1254, "Fraise", 12.3f, -10.5f,"Mars");
+                try {
+                    carrefour.ajouterProduit(P1);
+                }catch (MagasinPleinException e){
+                    System.out.println(e.getMessage());
+                }
+            }catch (PrixNegatifException ex){
+                System.out.println("PRIX NEGATIF");
+            }
+            // produit 1
+            try {
+                ProduitFruit P2 = new ProduitFruit(1224, "Pasteque", 50f, 10.5f,"Juin");
+                try {
+                    carrefour.ajouterProduit(P2);
+                }catch (MagasinPleinException e){
+                    System.out.println(e.getMessage());
+                }
+            }catch (PrixNegatifException ex){
+                System.out.println("PRIX NEGATIF");
+            }
+            // produit 3
+            try {
+                ProduitLegume P4 = new ProduitLegume(8521, "Artichauts", 14f, 10.5f,"Janvier");
+                try {
+                    carrefour.ajouterProduit(P4);
+                }catch (MagasinPleinException e){
+                    System.out.println(e.getMessage());
+                }
+            }catch (PrixNegatifException ex){
+                System.out.println("PRIX NEGATIF");
+            }
+            // produit 4
+            try {
+                ProduitLegume P4 = new ProduitLegume(9650, "FA99OUSS", 14f, 10.5f,"OCTOBRE");
+                try {
+                    carrefour.ajouterProduit(P4);
+                }catch (MagasinPleinException e){
+                    System.out.println(e.getMessage());
+                }
+            }catch (PrixNegatifException ex){
+                System.out.println("PRIX NEGATIF");
+            }
 
+        System.out.print(carrefour.afficherProduitsAlimentaires());
+    }
 }

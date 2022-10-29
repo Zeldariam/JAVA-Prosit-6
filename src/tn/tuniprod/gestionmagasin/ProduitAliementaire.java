@@ -27,17 +27,23 @@ public class ProduitAliementaire {
         this.marque = marque;
     }
 
-    public ProduitAliementaire(int identifiant, String libelle, String marque, float prix) {
+    public ProduitAliementaire(int identifiant, String libelle, String marque, float prix)  {
         this.identifiant = identifiant;
         this.libelle = libelle;
         this.marque = marque;
         this.prix = prix;
     }
-    //PROSIT 5 CONSTRUCTOR : REMOVED MARQUE & PRIX , ADDED QUANTITE
-    public ProduitAliementaire(int identifiant, String libelle,  float quantite) {
+    //PROSIT 6 CONSTRUCTOR : ADDED PRIX TO PROSIT 5 CONSTRUCTOR
+    public ProduitAliementaire(int identifiant, String libelle,  float quantite, float prix) throws PrixNegatifException {
         this.identifiant = identifiant;
         this.libelle = libelle;
         this.quantite = quantite;
+        if (prix<0){
+            this.prix=0;
+            throw new PrixNegatifException("!!!! PRIX NEGATIF !!!!");
+        }else {
+            this.prix=prix;
+        }
     }
 
 
