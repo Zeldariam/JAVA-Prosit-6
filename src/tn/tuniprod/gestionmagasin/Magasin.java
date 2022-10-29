@@ -29,7 +29,7 @@ public class Magasin {
         this.identifiant = identifiant;
         this.nom_magasin = nom_magasin;
         this.adresse = adresse;        
-        this.produits = new ProduitAliementaire[50];
+        this.produits = new ProduitAliementaire[2];
         this.employes = new Employe[20];
         this.nbr_employe = 0;
     }
@@ -103,15 +103,18 @@ public class Magasin {
         }  
     }
     
-    public void ajouterProduit(ProduitAliementaire produit) {
-/*        if (this.chercher(produit)) {
-            System.out.println("Produit existant");
-        } else {
-*/
-            this.produits[capacite] = produit;
-            this.capacite++;
-            //System.out.println("AJOUT PRODUIT DONE");
-
+    public void ajouterProduit(ProduitAliementaire produit) throws MagasinPleinException {
+       if (this.capacite ==2){
+           throw new MagasinPleinException("!!! MAGASIN PLEIN \n!!!");
+       }else{
+           if (this.chercher(produit)) {
+               System.out.println("Produit existant");
+           } else {
+               this.produits[capacite] = produit;
+               this.capacite++;
+               System.out.println("Produit Ajouté");
+           }
+       }
     }
     
     public int getIndexOfProduit(ProduitAliementaire produit){
